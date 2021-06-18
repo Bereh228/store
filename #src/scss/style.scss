@@ -11,8 +11,10 @@
 @import 'vars';
 
 @import 'reboot.min.scss';
+@import 'fonts';
 
 
+@import 'header';
 
 
 html{
@@ -20,13 +22,14 @@ html{
 }
 
 body{
-    font-family: Raleway, sans-serif;
+    
     overflow-x: hidden!important;
 
     position: relative;
 }
 
 .container{
-    width: 1440px;
+    width: 1100px;
 }
+
 

@@ -1,0 +1,103 @@
+.header{
+    min-height: 124px;
+    display: flex;
+    flex-direction: column;
+    color: $gray;
+    &__top{
+        
+        background-color: #000;
+        padding: 14px 0;
+        font-size: 1.2rem;
+        &-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li{
+            margin-right: 10px;
+            padding-right: 10px;
+            border-right: 1px solid $gray;
+            &:last-child{
+                border-right: none;
+            }
+            &:hover{
+                color: $white;
+            }
+            &:first-child{
+                img{
+                    width: 22px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &__info{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        list-style: none;
+    }
+    &-link{
+        text-decoration: none;
+        color: $gray;
+        &:hover{
+            color: $white;
+        }
+    }
+    &__login{
+        display: flex;
+        align-items: center;
+        .header-img{
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+            img{
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-text{
+        &:hover{
+            color: $white;
+        }
+    }
+
+    &__bottom{
+        min-height: 80px;
+        background-color: #0F0F0F;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        &-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            &-item{
+                padding: 31px 20px;
+                &:hover,
+                &_active{
+                    background-color: #1f1f1f;
+                    color: $white;
+                }
+              
+            }
+        }
+    }
+    &-logo{
+        a{
+            font-family: 'PostNoBillsJaffna',serif;
+            color: $white;
+            text-decoration: none;
+            font-size: 3.6rem;
+        }
+    }
+}
