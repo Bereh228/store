@@ -39,4 +39,16 @@
         left: 0;
     }
   }
+  &__footer{
+    color: $white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    background-color: #0f0f0f;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+  }
+  
 }
