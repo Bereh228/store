@@ -418,10 +418,12 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   color: gray;
+  overflow: hidden;
 }
 
 .header_fixed {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -561,6 +563,37 @@ template {
   font-size: 3.6rem;
 }
 
+#workTime {
+  position: relative;
+}
+
+.openMes,
+.closeMes {
+  position: absolute;
+  top: -250%;
+  left: -10px;
+  background-color: black;
+  color: #fff;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.5rem;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+.openMes_active,
+.closeMes_active {
+  top: -5px;
+}
+
+.closeMes_active {
+  top: -5px;
+}
+
 .main {
   min-height: 810px;
   padding: 160px 0;
@@ -665,6 +698,8 @@ template {
 }
 
 .collection__img {
+  position: relative;
+  overflow: hidden;
   width: 240px;
   height: 300px;
   background-color: #191b1c;
@@ -678,6 +713,10 @@ template {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+}
+
+.collection__img:hover .collection__buy {
+  left: 0;
 }
 
 .collection__img img {
@@ -744,6 +783,34 @@ template {
   font-size: 1.4rem;
   line-height: 1.6;
   margin-bottom: 61px;
+}
+
+.collection__buy {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.collection__buy img {
+  display: block;
+  width: 150px;
+  height: 150px;
 }
 
 .goods {
