@@ -1,0 +1,93 @@
+.collection{
+    font-family: 'Playfair Display',serif;
+    &__wrapper{
+        display: grid;
+        grid-template: minmax(730px, 1fr) / minmax(860px, 1fr) 1fr;
+        &-second{
+            display: grid;
+            grid-template: minmax(600px, 1fr) / 1fr minmax(860px, 1fr);
+        }
+    }
+    &__items{
+        padding: 93px 0;
+        color: $white;
+    }
+    
+
+    .items__wrapper{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        &_active{
+            background-color: #191b1c;
+        }
+    }
+
+    &__img{
+        width: 240px;
+        height: 300px;
+        background-color: #191b1c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        img{
+            width: 215px;
+            height: 215px;
+        }
+    }
+    &__title{
+        font-size: 1.8rem;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    &__price{
+        color: $gray;
+        font-size: 1.6rem;
+    }
+
+    &__new{
+        background: url('../img/collection_bg.png') center (center/cover) no-repeat;
+        display: flex;
+        justify-content: center;
+        >.new__wrapper{
+            margin-top: 500px;
+            >h2.title{
+                color: $white;
+                font-weight: bold;
+                margin-bottom: 26px;
+                &::after{
+                    height: 2px;
+                }
+            }
+        }
+        
+    }
+
+    &__backImg{
+        background: url('../img/collection_bg_two.png') center (center/cover) no-repeat;
+    }
+    &__twoeight{
+        color: $white;
+        text-align: center;
+        padding: 100px 0;
+        h2.title{
+            margin-bottom: 40px;
+        }
+        >.wrapper{
+            width: 480px;
+            margin: 0 auto;
+        }
+        .descr{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 61px;
+        }
+    }
+}

@@ -9,6 +9,7 @@
     }
 }
 @import 'vars';
+@import 'button';
 
 @import 'reboot.min.scss';
 @import 'fonts';
@@ -23,7 +24,7 @@ html{
 }
 
 body{
-    
+    background-color: #000;
     overflow-x: hidden!important;
 
     position: relative;
@@ -33,4 +34,19 @@ body{
     width: 1100px;
 }
 
+h2.title{
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-family: 'Playfair Display',serif;
+    text-align: center;
+    &::after{
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 2px;
+        background-color: $gray;
+        margin-top: 25px;
+    }
+}
 

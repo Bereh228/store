@@ -1,3 +1,54 @@
+.button {
+  font-family: "PT Sans", serif;
+  font-size: 1.8rem;
+  padding: 0.5em 1.5em;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  letter-spacing: 1.3px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.button:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.button__collection {
+  display: block;
+  margin: 0 auto;
+}
+
+.button__collection:hover.button__collection::before {
+  left: 0;
+}
+
+.button__twoeight:hover.button__twoeight::before {
+  left: 0;
+}
+
 *,
 ::after,
 ::before {
@@ -360,6 +411,13 @@ template {
   color: gray;
 }
 
+.header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .header__top {
   background-color: #000;
   padding: 14px 0;
@@ -548,11 +606,135 @@ template {
 }
 
 .main__descr {
-  font-family: 'Roboto';
-  font-weight: light;
+  font-family: 'PT Sans',serif;
+  font-weight: regular;
   line-height: 1.5;
   font-size: 1.6rem;
   text-align: center;
+}
+
+.collection {
+  font-family: 'Playfair Display',serif;
+}
+
+.collection__wrapper {
+  display: grid;
+  grid-template: minmax(730px, 1fr)/minmax(860px, 1fr) 1fr;
+}
+
+.collection__wrapper-second {
+  display: grid;
+  grid-template: minmax(600px, 1fr)/1fr minmax(860px, 1fr);
+}
+
+.collection__items {
+  padding: 93px 0;
+  color: #fff;
+}
+
+.collection .items__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+}
+
+.collection__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection__item_active {
+  background-color: #191b1c;
+}
+
+.collection__img {
+  width: 240px;
+  height: 300px;
+  background-color: #191b1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.collection__img img {
+  width: 215px;
+  height: 215px;
+}
+
+.collection__title {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.collection__price {
+  color: gray;
+  font-size: 1.6rem;
+}
+
+.collection__new {
+  background: url("../img/collection_bg.png") center center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.collection__new > .new__wrapper {
+  margin-top: 500px;
+}
+
+.collection__new > .new__wrapper > h2.title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+
+.collection__new > .new__wrapper > h2.title::after {
+  height: 2px;
+}
+
+.collection__backImg {
+  background: url("../img/collection_bg_two.png") center center/cover no-repeat;
+}
+
+.collection__twoeight {
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.collection__twoeight h2.title {
+  margin-bottom: 40px;
+}
+
+.collection__twoeight > .wrapper {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.collection__twoeight .descr {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 61px;
 }
 
 html {
@@ -560,6 +742,7 @@ html {
 }
 
 body {
+  background-color: #000;
   overflow-x: hidden !important;
   position: relative;
 }
@@ -567,6 +750,25 @@ body {
 .container {
   width: 1100px;
 }
+
+h2.title {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-family: 'Playfair Display',serif;
+  text-align: center;
+}
+
+h2.title::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 2px;
+  background-color: gray;
+  margin-top: 25px;
+}
 @supports (-webkit-appearance:none){
 .main{background:url("../img/main_bg.webp") center center/cover no-repeat}
+.collection__new{background:url("../img/collection_bg.webp") center center/cover no-repeat}
+.collection__backImg{background:url("../img/collection_bg_two.webp") center center/cover no-repeat}
 }
