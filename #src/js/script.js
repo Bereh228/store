@@ -2,17 +2,33 @@ const header = document.getElementById('header');
 const workTime = document.getElementById('workTime');
 const openMes = document.querySelector('.openMes');
 const closeMes = document.querySelector('.closeMes');
+const arrowUp = document.querySelector('.toTop');
 
 function checkScrollAndHeader(){
     let scrollY = window.pageYOffset;
+    console.log(scrollY);
 
     if(scrollY > 500){
         header.classList.add('header_fixed');
     }
+    else if(scrollY <= 500 && scrollY > 250){
+        header.classList.add('header_fixed-in');
+    }
     else{
         header.classList.remove('header_fixed');
+        header.classList.remove('header_fixed-in');
     }
+
+    // arrow up
+    if(scrollY > 1800){
+        arrowUp.classList.add('toTop_active');
+    }
+    else{
+        arrowUp.classList.remove('toTop_active');
+    }
+
 }
+
 
 function showOpen(){
     openMes.classList.add('openMes_active');
@@ -53,3 +69,14 @@ workTime.addEventListener('mouseover', function(){
    }
 
 })
+
+// scroll to top
+$('a[href^="#"').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    });
+    return false;
+});

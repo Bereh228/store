@@ -4,6 +4,15 @@
     flex-direction: column;
     color: $gray;
     overflow: hidden;
+    transition: 1s all;
+
+    &_fixed-in{
+        top: -100%;
+        position: fixed;
+        left: 0;
+        width: 100%;
+
+    }
 
     &_fixed{
         position: fixed;
@@ -12,6 +21,7 @@
         left: 0;
         width: 100%;
     }
+    
 
     &__top{
         
