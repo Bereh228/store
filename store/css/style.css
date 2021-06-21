@@ -7,9 +7,6 @@
   border: 2px solid #fff;
   text-transform: uppercase;
   color: #fff;
-  -webkit-transition: 0.3s all;
-  -o-transition: 0.3s all;
-  transition: 0.3s all;
   letter-spacing: 1.3px;
   overflow: hidden;
   position: relative;
@@ -24,9 +21,9 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
   background-color: #fff;
   z-index: -1;
 }
@@ -735,6 +732,34 @@ template {
   font-size: 1.4rem;
   line-height: 1.6;
   margin-bottom: 61px;
+}
+
+.goods {
+  padding: 120px 0px 150px;
+  color: white;
+  min-height: 1289px;
+}
+
+.goods .title {
+  margin-bottom: 81px;
+}
+
+.goods__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.goods .collection__item {
+  margin-bottom: 15px;
 }
 
 html {

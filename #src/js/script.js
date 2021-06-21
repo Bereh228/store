@@ -1,3 +1,4 @@
+
 // const header = document.getElementById('header');
 
 // function checkScrollAndHeader(){
@@ -16,3 +17,8 @@
 // document.addEventListener('DOMContentLoaded',checkScrollAndHeader)
 
 // window.addEventListener('scroll',checkScrollAndHeader);
+
+
+
+
+      

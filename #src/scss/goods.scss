@@ -1,0 +1,17 @@
+.goods{
+    padding: 120px 0px 150px;
+    color: white;
+    min-height: 1289px;
+    .title{
+        margin-bottom: 81px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .collection__item{
+        margin-bottom: 15px;
+    }
+}
