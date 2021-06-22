@@ -6,7 +6,6 @@ const arrowUp = document.querySelector('.toTop');
 
 function checkScrollAndHeader(){
     let scrollY = window.pageYOffset;
-    console.log(scrollY);
 
     if(scrollY > 500){
         header.classList.add('header_fixed');
@@ -20,12 +19,14 @@ function checkScrollAndHeader(){
     }
 
     // arrow up
-    if(scrollY > 1800){
+    if(scrollY > 1400){
         arrowUp.classList.add('toTop_active');
     }
     else{
         arrowUp.classList.remove('toTop_active');
     }
+
+
 
 }
 
@@ -80,3 +81,4 @@ $('a[href^="#"').on('click', function() {
     });
     return false;
 });
+

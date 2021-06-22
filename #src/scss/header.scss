@@ -6,6 +6,26 @@
     overflow: hidden;
     transition: 1s all;
 
+    .shopping-cart{
+        background: url('../img/logo_buy.png') center (center/contain) no-repeat;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+        
+        position: relative;
+        &:hover{
+            color: black!important;
+        }
+        >.count-goods{
+            position: absolute;
+            top: 20px;
+            right: 12px;
+            background-color: rgba($color: $white, $alpha: .7);
+            line-height: 1;
+        }
+    }
+
     &_fixed-in{
         top: -100%;
         position: fixed;

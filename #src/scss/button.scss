@@ -50,5 +50,13 @@
     border: none;
     padding: 10px 20px;
   }
+  &__buy-goods,
+  &__sumbit-goods{
+    &:hover{
+      color: white;
+      font-weight: normal;
+    }
+  }
+ 
   
 }
