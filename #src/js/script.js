@@ -3,6 +3,7 @@ const workTime = document.getElementById('workTime');
 const openMes = document.querySelector('.openMes');
 const closeMes = document.querySelector('.closeMes');
 const arrowUp = document.querySelector('.toTop');
+const exitOverlay = document.querySelector('.close');
 
 function checkScrollAndHeader(){
     let scrollY = window.pageYOffset;
@@ -82,3 +83,16 @@ $('a[href^="#"').on('click', function() {
     return false;
 });
 
+function closeOverlay(){
+    $('#overlay, #buy__window, #success__purchase').fadeOut();
+    $('#goods-count').html(1);
+
+}
+
+// exit overlay
+exitOverlay.addEventListener('click',closeOverlay);
+addEventListener('keydown',function(event){
+    if(event.code === 'Escape'){
+        closeOverlay();
+    }
+});

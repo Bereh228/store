@@ -3,6 +3,7 @@
     padding: 160px 0;
     background: url('../img/main_bg.png') center (center/cover) no-repeat;
     background-attachment: fixed!important;
+    
     &__wrapper{
         display: flex;
         flex-direction: column;
@@ -11,6 +12,8 @@
         color: $white;
         max-width: 730px;
         margin: 0 auto;
+        overflow: hidden;
+
     }
     &__title{
         border: 5px solid $white;

@@ -1,5 +1,76 @@
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        height: 100vh; 
+    }
+
+
+    .close {
+        position: absolute;
+        right: 28px;
+        top: 28px;
+        width: 40px;
+        height: 40px;
+        opacity: 0.3;
+        cursor: pointer;
+        color: white;
+        transition: .5s all;
+    }
+    .close:hover {
+        opacity: 1;
+    }
+    .close:before, .close:after {
+        position: absolute;
+        left: 15px;
+        content: '';
+        height: 33px;
+        width: 2px;
+        background-color: #fff!important;
+    }
+    .close:before {
+        transform: rotate(45deg);
+    }
+    .close:after {
+        transform: rotate(-45deg);
+    }
+
+    .success__purchase{
+        display: none;
+        >.wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            .question__block{
+                font-size: 3rem;
+                .wrapper{
+                    text-align: center;
+                }
+                .button-yes:hover,
+                .button-no:hover{
+                    color: white!important;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+}
 .buy{
     &__window{
+        display: none;
         color: $white;
         .wrapper{
             width: 600px;
@@ -31,8 +102,8 @@
     }
     &__price{
         font-size: 2.5rem;
-        margin-bottom: 10px;
         line-height: 1;
+        margin-right: 5px;
     }
     &__count-panel{
         display: flex;
@@ -43,6 +114,10 @@
     &-minus,
     &-count,
     &-plus{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 55px;
         font-size: 5rem;
         line-height: 1;
         background-color: #0f0f0f;
@@ -54,5 +129,15 @@
         background-color: black;
         cursor: text;
     }
+    &-price-cur{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    &__currency{
+        font-size: 2rem;
+    }
     
-}
+
+    
+}   
