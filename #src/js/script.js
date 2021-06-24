@@ -84,7 +84,7 @@ $('a[href^="#"').on('click', function() {
 });
 
 function closeOverlay(){
-    $('#overlay, #buy__window, #success__purchase').fadeOut();
+    $('#overlay, #buy__window, #success__purchase, #ckeckout-block, #afterCkecout').fadeOut();
     $('#goods-count').html(1);
 
 }

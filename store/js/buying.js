@@ -42,6 +42,7 @@ collectionItems.addEventListener('click',function(event){
 
                 dataObj.count++;
                 goodsPrice.innerHTML = dataObj.price * event2.target.previousElementSibling.innerHTML;
+
             }
             if(event2.target.classList.contains('goods-minus')){
                 if(event2.target.nextElementSibling.innerHTML!= 1){
@@ -70,6 +71,13 @@ collectionItems.addEventListener('click',function(event){
                 // add suma
                 sumaPay+=(dataObj.price * dataObj.count);
                 sumaPayElement.innerHTML = 'Сумма к оплате: ' + sumaPay + ' грн.';
+
+                // show button checkout
+                if(sumaPay > 0){
+                    $('.checkout').fadeIn();
+                }
+
+                dataObj.count = 1;
 
                 closeOverlay();
                 setTimeout(() => {

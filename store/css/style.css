@@ -11,6 +11,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .button::before {
@@ -60,6 +61,47 @@
 
 .button__buy-goods:hover,
 .button__sumbit-goods:hover {
+  color: white;
+  font-weight: normal;
+}
+
+.delete-goods {
+  text-align: center;
+}
+
+.delete-goods:hover {
+  color: white;
+  font-weight: normal;
+}
+
+.checkout {
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 55px;
+  right: 55px;
+  text-align: center;
+}
+
+.checkout:hover {
+  color: white;
+  font-weight: normal;
+}
+
+.valide-purchase {
+  text-align: center;
+}
+
+.valide-purchase:hover {
+  color: white;
+  font-weight: normal;
+}
+
+.backToStore {
+  text-align: center;
+}
+
+.backToStore:hover {
   color: white;
   font-weight: normal;
 }
@@ -1108,6 +1150,67 @@ template {
   font-weight: normal;
 }
 
+.overlay .checkout-block {
+  display: none;
+}
+
+.overlay .checkout-block > .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overlay .checkout-block > .wrapper h2.title {
+  margin-bottom: 10px;
+}
+
+.overlay .checkout-block > .wrapper form > .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overlay .checkout-block > .wrapper form input {
+  padding: 15px;
+  outline: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.overlay .checkout-block > .wrapper form input::-webkit-outer-spin-button,
+.overlay .checkout-block > .wrapper form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.overlay .afterCkecout {
+  display: none;
+  color: white;
+}
+
+.overlay .afterCkecout > .wrapper {
+  text-align: center;
+}
+
+.overlay .afterCkecout h2.title {
+  margin-bottom: 10px;
+}
+
 .buy__window {
   display: none;
   color: #fff;
@@ -1210,11 +1313,12 @@ template {
   z-index: 7;
   height: 100vh;
   width: 40%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 20px 0 0 20px;
   -webkit-transition: all 1s 0s ease-out;
   -o-transition: all 1s 0s ease-out;
   transition: all 1s 0s ease-out;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -1283,12 +1387,25 @@ template {
   border-bottom: 2px solid #1f1f1f;
   margin-bottom: 10px;
   padding-bottom: 20px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
 }
 
 .shopcart .shop-item_added {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.shopcart .shop-item_deletted {
+  -webkit-transform: translate(100%);
+      -ms-transform: translate(100%);
+          transform: translate(100%);
+}
+
+.shopcart .shop-count {
+  margin-bottom: 10px;
 }
 
 .shopcart .shop__img {

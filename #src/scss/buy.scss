@@ -67,7 +67,60 @@
         }
     }
 
+    .checkout-block{
+        display: none;
+        >.wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            h2.title{
+                margin-bottom: 10px;
+            }
+            form{
+                >.wrapper{
+                    display: flex;
+                    flex-direction: column;
+                }
+                input{
+                    padding: 15px;
+                    outline: none;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+            }
+        }
+    }
+    .afterCkecout{
+        display: none;
+        color: white;
+        >.wrapper{
+            text-align: center;
+        }
+        h2.title{
+            margin-bottom: 10px;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 .buy{
     &__window{
         display: none;

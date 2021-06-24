@@ -11,6 +11,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  cursor: pointer;
   &::before {
     content: "";
     display: block;
@@ -60,4 +61,42 @@
 
  
   
+}
+
+
+.delete-goods{
+  text-align: center;
+  &:hover{
+    color: white;
+    font-weight: normal;
+  }
+}
+
+.checkout{
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 55px;
+  right: 55px;
+  text-align: center;
+  &:hover{
+    color: white;
+    font-weight: normal;
+  }
+}
+
+.valide-purchase{
+  text-align: center;
+  &:hover{
+    color: white;
+    font-weight: normal;
+  }
+}
+
+.backToStore{
+  text-align: center;
+  &:hover{
+    color: white;
+    font-weight: normal;
+  }
 }
