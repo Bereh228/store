@@ -86,7 +86,8 @@ $('a[href^="#"').on('click', function() {
 function closeOverlay(){
     $('#overlay, #buy__window, #success__purchase, #ckeckout-block, #afterCkecout').fadeOut();
     $('#goods-count').html(1);
-
+    arrGoods.length = 0; // удаляю все объекты с масива
+    textarea.innerHTML = '';// удаляємо содержимое textarea
 }
 
 // exit overlay
@@ -95,4 +96,9 @@ addEventListener('keydown',function(event){
     if(event.code === 'Escape'){
         closeOverlay();
     }
+});
+
+
+$(function(){
+    $("#phone").mask("+38(099)-999-9999");
 });

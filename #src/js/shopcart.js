@@ -9,6 +9,9 @@ let objAboutGoods = {
     count: 0
 }
 
+// товары сюда пихаем
+let arrGoods = [];
+
 // show shopCart
 showCart.addEventListener('click',function(){
     cart.classList.add('shopcart_active');
@@ -18,6 +21,7 @@ showCart.addEventListener('click',function(){
 document.querySelector('.shopcart').addEventListener('click',function(event){
     if(event.target.classList.contains('shopcart-close')){
         event.target.parentNode.classList.remove('shopcart_active');
+        arrGoods.length = 0;
     }
 })
 
@@ -51,6 +55,7 @@ shopElements.addEventListener('click',function(event){
 
         // if == 0 => CLOSE SHOPCART
         if(sumaPay === 0){
+            arrGoods.length = 0;
             $('.checkout').fadeOut();
             setTimeout(() => {
                 cart.classList.remove('shopcart_active');
@@ -59,12 +64,41 @@ shopElements.addEventListener('click',function(event){
     }
 })
 
+const textarea = document.getElementById('list-goods');
+
 // listener on cart
 cart.addEventListener('click',function(event){
     if(event.target.classList.contains('checkout')){
         cart.classList.remove('shopcart_active');
         $('#overlay, #ckeckout-block').fadeIn('slow');
 
+        // генерируем список всех товаров
+        let allGoods = document.querySelectorAll('.shop-item_added');
+        for(let item of allGoods){
+
+            let objGoods = {
+                name: '',
+                price: '',
+                count: '',
+            }
+
+            objGoods.name = item.firstElementChild.nextElementSibling.firstElementChild.innerHTML;
+            objGoods.price = item.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.innerHTML;
+            objGoods.count = item.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.innerHTML;
+
+            arrGoods.push(objGoods);
+        }
+        
+        // console.log(arrGoods);
+
+        // закидываем значение в textarea
+        for(let index = 0; index < arrGoods.length; index++){
+            textarea.innerHTML = textarea.innerHTML + arrGoods[index].name + '\n' + arrGoods[index].price + '\n' + arrGoods[index].count + '\n\n';
+        }
+        
+        // console.log('Я сформував текст ареа');
+
+        event.stopImmediatePropagation();
     }
     event.stopImmediatePropagation();
 })
@@ -82,6 +116,9 @@ afterCkeckOutButton.addEventListener('click',()=>{
     $('#overlay, #afterCkecout').fadeOut();
 });
 
+$('.valide-purchase').on('click',function(){
+    alert(document.getElementById('phone').value);
+})
 
 
 

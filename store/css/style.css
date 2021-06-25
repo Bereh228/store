@@ -1175,6 +1175,10 @@ template {
   margin-bottom: 10px;
 }
 
+.overlay .checkout-block > .wrapper form {
+  position: relative;
+}
+
 .overlay .checkout-block > .wrapper form > .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1185,7 +1189,8 @@ template {
           flex-direction: column;
 }
 
-.overlay .checkout-block > .wrapper form input {
+.overlay .checkout-block > .wrapper form input,
+.overlay .checkout-block > .wrapper form textarea {
   padding: 15px;
   outline: none;
   font-size: 1.8rem;
@@ -1193,9 +1198,22 @@ template {
   margin-bottom: 10px;
 }
 
+.overlay .checkout-block > .wrapper form textarea {
+  resize: none;
+  height: 150px;
+}
+
 .overlay .checkout-block > .wrapper form input::-webkit-outer-spin-button,
 .overlay .checkout-block > .wrapper form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.overlay .checkout-block > .wrapper form .required-input {
+  position: absolute;
+  top: -11px;
+  right: -17px;
+  color: white;
+  font-size: 3rem;
 }
 
 .overlay .afterCkecout {

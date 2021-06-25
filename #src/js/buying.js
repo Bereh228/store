@@ -15,6 +15,7 @@ let dataObj = {
     count: 1
 }
 
+
 collectionItems.addEventListener('click',function(event){
     let img;
     let price;
@@ -65,6 +66,8 @@ collectionItems.addEventListener('click',function(event){
                 item.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.innerHTML = 'Сумма: ' + (dataObj.price * dataObj.count) + ' грн.';
                 item.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.innerHTML = 'Количество: ' + dataObj.count + ' шт.';
                 
+
+
                 item.classList.add('shop-item_added');
                 document.querySelector('.shop__items-wrapper').appendChild(item);
 

@@ -10,6 +10,7 @@ let path={
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
+        php: project_folder + "/php/",
     },
     src:{
         html: [source_folder + "/*.html","!" + source_folder + "/_*.html" ],
@@ -17,11 +18,13 @@ let path={
         js: source_folder + "/js/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
+        php: source_folder + "/php/*.php",
     },
     watch:{
         html:source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
+        php: source_folder + "php/**/*.php",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
     },
     clean: "./" + project_folder+"/"
@@ -120,6 +123,23 @@ function js(){
         .pipe(browsersync.stream())
 }
 
+function php(){
+    return src(path.src.php)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.php))
+        .pipe(browsersync.stream())
+        .pipe(
+            uglify() 
+        )
+        .pipe(
+            rename({
+                extname: ".php"
+            })
+        )
+        .pipe(dest(path.build.php))
+        .pipe(browsersync.stream())
+}
+
 function images(){
     return src(path.src.img)
         .pipe(
@@ -204,6 +224,7 @@ function watchFiles(params){
     gulp.watch([path.watch.html],html);
     gulp.watch([path.watch.css],css);
     gulp.watch([path.watch.js],js);
+    gulp.watch([path.watch.php],php);
     gulp.watch([path.watch.img],images);
 
 }
@@ -213,7 +234,7 @@ function clean(params){
 }
 
 
-let build = gulp.series(clean, gulp.parallel(js,css,html,images,fonts),fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js,php,css,html,images,fonts),fontsStyle);
 let watch = gulp.parallel(build,watchFiles,browserSync);
 
 fontsStyle
@@ -225,4 +246,5 @@ exports.build = build;
 exports.html = html;
 exports.css = css;
 exports.js = js;
+exports.php = php;
 exports.images = images;

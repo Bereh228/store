@@ -79,21 +79,33 @@
                 margin-bottom: 10px;
             }
             form{
+                position: relative;
                 >.wrapper{
                     display: flex;
                     flex-direction: column;
                 }
-                input{
+                input,
+                textarea{
                     padding: 15px;
                     outline: none;
                     font-size: 1.8rem;
                     font-weight: bold;
                     margin-bottom: 10px;
-                    
+                }
+                textarea{
+                    resize: none;
+                    height: 150px;
                 }
                 input::-webkit-outer-spin-button,
                 input::-webkit-inner-spin-button {
                     -webkit-appearance: none;
+                }
+                .required-input{
+                    position: absolute;
+                    top: -11px;
+                    right: -17px;
+                    color: white;
+                    font-size: 3rem;
                 }
             }
         }
