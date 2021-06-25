@@ -948,6 +948,12 @@ template {
      object-fit: cover;
 }
 
+.brand .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1330,7 +1336,7 @@ template {
   right: -100%;
   z-index: 7;
   height: 100vh;
-  width: 40%;
+  width: 70%;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 20px 0 0 20px;
   -webkit-transition: all 1s 0s ease-out;
@@ -1492,10 +1498,241 @@ h2.title::after {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+@media (max-width: 1300px) {
+  .collection__wrapper {
+    grid-template: minmax(730px, 1fr) 300px/1fr;
+  }
+
+  .collection .new__wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .footer__title,
+  .footer__descr {
+    margin-bottom: 15px;
+  }
+
+  .brand__img {
+    width: 210px;
+  }
+
+  .brand__img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (max-width: 991px) {
+  .brand__img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 910px) {
+  .collection__wrapper-second {
+    grid-template: 350px minmax(300px, 1fr)/1fr;
+  }
+
+  .collection__wrapper-second .collection__backImg {
+    background-attachment: fixed;
+  }
+
+  .shopcart {
+    width: 85%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__info li:nth-child(2) {
+    display: none;
+  }
+
+  .collection__wrapper {
+    grid-template: 1fr/ 1fr;
+  }
+
+  .collection__wrapper-second {
+    grid-template: 300px minmax(300px, 1fr)/1fr;
+  }
+
+  .collection .items__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .collection__item {
+    margin-bottom: 15px;
+  }
+
+  .collection__new {
+    padding: 15px 0;
+  }
+
+  .brand__img {
+    width: 260px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: auto;
+  }
+
+  #workTime {
+    display: none;
+  }
+
+  .collection__twoeight .wrapper {
+    width: auto;
+  }
+
+  .overlay .success__purchase h2.title {
+    font-size: 2.5rem;
+  }
+
+  .overlay .success__purchase .question {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .overlay .success__purchase button {
+    font-size: 1.5rem;
+  }
+
+  .footer__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__form input {
+    margin-bottom: 10px;
+  }
+
+  .footer__form button {
+    width: 210px;
+  }
+
+  .buy__window .wrapper {
+    width: auto;
+  }
+
+  .buy__window h2.title {
+    font-size: 2.3rem;
+  }
+
+  .buy__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .overlay .close {
+    right: -2px;
+    top: 59px;
+  }
+
+  .shop__items-wrapper {
+    padding-top: 80px;
+  }
+
+  .shop-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .shop-item .shop__info {
+    font-size: 1.6rem;
+  }
+
+  .shopcart .shop__img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .shopcart .shop__img img {
+    display: block;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .shopcart button#ckeckout {
+    top: 100px !important;
+  }
+
+  .shopcart-close {
+    top: 35px;
+  }
+}
 @supports (-webkit-appearance:none){
 .header .shopping-cart{background:url("../img/logo_buy.webp") center center/contain no-repeat}
 .main{background:url("../img/main_bg.webp") center center/cover no-repeat}
 .collection__new{background:url("../img/collection_bg.webp") center center/cover no-repeat}
 .collection__backImg{background:url("../img/collection_bg_two.webp") center center/cover no-repeat}
 .footer__top{background:url("../img/footer_bg.webp") center center/cover no-repeat}
+}
+
+ @media (max-width: 1300px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1199px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 991px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 910px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 767px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 575px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }

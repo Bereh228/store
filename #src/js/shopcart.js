@@ -117,7 +117,6 @@ afterCkeckOutButton.addEventListener('click',()=>{
 });
 
 $('.valide-purchase').on('click',function(){
-    alert(document.getElementById('phone').value);
 })
 
 

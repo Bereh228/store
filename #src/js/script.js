@@ -102,3 +102,4 @@ addEventListener('keydown',function(event){
 $(function(){
     $("#phone").mask("+38(099)-999-9999");
 });
+
