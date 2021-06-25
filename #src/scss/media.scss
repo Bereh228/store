@@ -22,6 +22,12 @@
             object-fit: contain;
         }
     }
+    .goods__wrapper{
+        justify-content: center;
+        .collection__item{
+            margin: 15px;
+        }
+    }
 }
 
 @media (max-width: 991px){
@@ -72,6 +78,13 @@
         }
 
     }
+    .goods__wrapper{
+        justify-content: space-between;
+        .collection__item{
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
     .brand{
         &__img{
             width: 260px;
@@ -99,11 +112,11 @@
             font-size: 2.5rem;
         }
         .question{
-            font-size: 2rem;
+            font-size: 2.1rem;
             margin-bottom: 5px;
         }
         button{
-            font-size: 1.5rem;
+            font-size: 1.7rem;
         }
     }
 

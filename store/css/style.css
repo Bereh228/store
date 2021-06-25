@@ -1523,6 +1523,16 @@ h2.title::after {
     -o-object-fit: contain;
        object-fit: contain;
   }
+
+  .goods__wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .goods__wrapper .collection__item {
+    margin: 15px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1571,6 +1581,17 @@ h2.title::after {
     padding: 15px 0;
   }
 
+  .goods__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .goods__wrapper .collection__item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
   .brand__img {
     width: 260px;
   }
@@ -1594,12 +1615,12 @@ h2.title::after {
   }
 
   .overlay .success__purchase .question {
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-bottom: 5px;
   }
 
   .overlay .success__purchase button {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .footer__form {
